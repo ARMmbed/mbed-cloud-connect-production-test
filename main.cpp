@@ -78,33 +78,6 @@ else status6 = -1;
 
 printf("ID = 0x%04X\n\r", spi_mem.readREMS());
 
-printf("PRESS SW1\n\r");
-lcd.cls();
-lcd.locate(0, 12);
-lcd.printf("PRESS SW1");
-while (sw1)
-{
-}
-
-lcd.cls();
-lcd.locate(90, 0);
-lcd.printf("SW1 OK!");
-printf("SW1 OK!\n\r");
-
-printf("PRESS SW2\n\r");
-lcd.locate(0, 12);
-lcd.printf("PRESS SW2");
-
-while (sw2)
-{
-}
-lcd.cls();
-lcd.locate(90, 0);
-lcd.printf("SW1 OK!");
-lcd.locate(90, 8);
-lcd.printf("SW2 OK!");
-printf("SW2 OK!\n\r");
-
 if (i2c1.write(MMA7660_ADDR, NULL, 0) == 0)
 {
     printf("ACCEL OK!\n\r");
